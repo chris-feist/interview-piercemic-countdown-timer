@@ -19,10 +19,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <button onClick={onClick}>
+      <button onClick={onClick} data-testid='countdown-button'>
         {isStart ? "Start Countdown" : "Cancel"}
       </button>
-      {!isStart && <h1>{count > 0 ? count : "GO"}</h1>}
+      {!isStart && <h1 data-testid='countdown-count'>{count > 0 ? count : "GO"}</h1>}
     </div>
   );
 }
